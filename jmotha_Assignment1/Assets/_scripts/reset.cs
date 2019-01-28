@@ -6,12 +6,15 @@ public class reset : MonoBehaviour
 {
     // varibale to store start position of object
     Vector3 startposition;
+    Vector3 originalrotation;
 
     // Start is called before the first frame update
     void Start()
     {
         // stores start position
         startposition = transform.position;
+        originalrotation = transform.eulerAngles;
+
     }
 
     // Update is called once per frame
@@ -27,6 +30,7 @@ public class reset : MonoBehaviour
         {
             //sets position to original start position
             transform.position = startposition;
+            transform.eulerAngles = originalrotation;
 
         }
     }
