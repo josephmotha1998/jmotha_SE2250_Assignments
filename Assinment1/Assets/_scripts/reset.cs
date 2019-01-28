@@ -5,13 +5,13 @@ using UnityEngine;
 public class reset : MonoBehaviour
 {
     // varibale to store start position of object
-    Vector3 StartPosition;
+    Vector3 startposition;
 
     // Start is called before the first frame update
     void Start()
     {
         // stores start position
-        StartPosition = transform.position;
+        startposition = transform.position;
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class reset : MonoBehaviour
         if (Input.GetMouseButtonUp(1))
         {
             //sets position to original start position
-            transform.position = StartPosition;
+            transform.position = startposition;
 
         }
     }
