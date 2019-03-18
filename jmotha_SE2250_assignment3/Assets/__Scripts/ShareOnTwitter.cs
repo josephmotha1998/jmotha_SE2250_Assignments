@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ShareOnTwitter : MonoBehaviour
 {
-    string twitter_address = "https://twitter.com/intent/tweet";
+    private string _twitter_address = "https://twitter.com/intent/tweet";
 
-    string tweet_language = "en";
+    private string _tweet_language = "en";
 
-    string displaytext = "Check out my new score: ";
+    private string _displaytext = "Check out my new score: ";
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,6 @@ public class ShareOnTwitter : MonoBehaviour
 
     public void Share()
     {
-        Application.OpenURL(twitter_address + "?text=" + WWW.EscapeURL(displaytext) + ScoreManager.HIGH_SCORE + "&amp;lang=" + WWW.EscapeURL(tweet_language));
+        Application.OpenURL(_twitter_address + "?text=" + WWW.EscapeURL(_displaytext) + ScoreManager.HIGH_SCORE + "&amp;lang=" + WWW.EscapeURL(_tweet_language));
     }
 }
